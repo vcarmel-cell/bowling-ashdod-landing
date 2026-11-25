@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>באולינג אשדוד</title>
+<meta name="description" content="ליגת הבאולינג של אשדוד: דירוג קבוצתי, דירוג אישי, נבחרת המחזור ושיאים אישיים.">
+<meta name="theme-color" content="#0B2E4A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="באולינג אשדוד">
+<meta property="og:description" content="הטבלה, התוצאות והשיאים של ליגת הבאולינג של אשדוד.">
+<meta property="og:url" content="https://vcarmel-cell.github.io/bowling-ashdod-landing/">
+<meta property="og:image" content="https://vcarmel-cell.github.io/bowling-ashdod-landing/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/karantina-700-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <section class="stage" aria-labelledby="league-name">
+    <header class="masking">
+      <h1 id="league-name">באולינג אשדוד</h1>
+      <p class="masking-sub">ליגת הבאולינג של העיר</p>
+      <a class="cta cta-deck" href="https://vcarmel-cell.github.io/bowling-Ashdod/">
+        <span>לטבלה ולתוצאות</span>
+        <svg class="cta-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6"/></svg>
+      </a>
+    </header>
+
+    <div class="scene" id="scene">
+      <svg id="lane" viewBox="-1600 0 3200 800" preserveAspectRatio="xMidYMax slice" role="img" aria-labelledby="lane-desc">
+        <desc id="lane-desc">מסלול באולינג במבט מאזור הגלגול. גיבור על מגלגל כדור לאורך המסלול ומפיל את כל עשרת הפינים.</desc>
+      </svg>
+
+    </div>
+
+    <div class="console">
+      <p class="console-now" aria-live="polite"><span class="console-label">על המסלול:</span> <strong id="now-name">ברק</strong></p>
+      <div class="console-actions">
+        <button type="button" class="console-btn" id="btn-pause" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-pause"><path d="M8 5v14M16 5v14"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ico-play"><path d="M7 5l12 7-12 7z"/></svg>
+          <span id="pause-label">עצירה</span>
+        </button>
+        <button type="button" class="console-btn" id="btn-next">הגיבור הבא</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="roster" aria-labelledby="roster-title">
+    <div class="roster-inner">
+      <h2 id="roster-title">שלושה על המסלול</h2>
+      <p class="roster-note">דמויות בדיוניות שנוצרו לעמוד הזה. השחקנים האמיתיים נמצאים בטבלה.</p>
+
+      <ol class="sheet">
+        <li class="sheet-row" data-hero="0">
+          <svg class="sheet-hero" viewBox="-90 -310 180 320" aria-hidden="true"></svg>
+          <div class="sheet-body">
+            <h3>ברק <span class="x-cell" aria-hidden="true"><svg viewBox="0 0 20 20"><path class="x-edge" d="M3 3l14 14M17 3 3 17"/><path d="M3 3l14 14M17 3 3 17"/></svg></span></h3>
+            <p>זורק כל כך מהר שהפינים נופלים עוד לפני שהרעם מגיע.</p>
+            <ul class="suit" aria-label="צבעי החליפה">
+              <li><i style="--c:#1D3F95"></i>כחול סערה</li>
+              <li><i style="--c:#FFC93C"></i>צהוב ברק</li>
+              <li><i style="--c:#F6F1E7"></i>לבן</li>
+            </ul>
+          </div>
+        </li>
+        <li class="sheet-row" data-hero="1">
+          <svg class="sheet-hero" viewBox="-90 -310 180 320" aria-hidden="true"></svg>
+          <div class="sheet-body">
+            <h3>גלית <span class="x-cell" aria-hidden="true"><svg viewBox="0 0 20 20"><path class="x-edge" d="M3 3l14 14M17 3 3 17"/><path d="M3 3l14 14M17 3 3 17"/></svg></span></h3>
+            <p>באה מהחוף של אשדוד. הכדור שלה מתעקל כמו גל ונכנס בדיוק לכיס.</p>
+            <ul class="suit" aria-label="צבעי החליפה">
+              <li><i style="--c:#0E8A8A"></i>טורקיז חוף</li>
+              <li><i style="--c:#F2805E"></i>אלמוג</li>
+              <li><i style="--c:#F2D9A6"></i>חול</li>
+            </ul>
+          </div>
+        </li>
+        <li class="sheet-row" data-hero="2">
+          <svg class="sheet-hero" viewBox="-90 -310 180 320" aria-hidden="true"></svg>
+          <div class="sheet-body">
+            <h3>העוגן <span class="x-cell" aria-hidden="true"><svg viewBox="0 0 20 20"><path class="x-edge" d="M3 3l14 14M17 3 3 17"/><path d="M3 3l14 14M17 3 3 17"/></svg></span></h3>
+            <p>עלה מהנמל עם זרוע של מנוף. כשהוא משחרר, אף פין לא נשאר עומד.</p>
+            <ul class="suit" aria-label="צבעי החליפה">
+              <li><i style="--c:#2B2D33"></i>פחם נמל</li>
+              <li><i style="--c:#C8102E"></i>אדום מנוף</li>
+              <li><i style="--c:#E0A526"></i>זהב</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-title">
+    <div class="close-inner">
+      <h2 id="close-title">הטבלה מחכה לך</h2>
+      <p>דירוג קבוצתי, דירוג אישי, נבחרת המחזור ושיאים אישיים, ישר מהמסלולים.</p>
+      <a class="cta" href="https://vcarmel-cell.github.io/bowling-Ashdod/">
+        <span>לטבלה ולתוצאות</span>
+        <svg class="cta-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <nav aria-label="מידע משפטי">
+    <a href="privacy.html">מדיניות פרטיות</a>
+    <a href="terms.html">תנאי שימוש</a>
+    <a href="accessibility.html">הצהרת נגישות</a>
+  </nav>
+  <p>© 2026 באולינג אשדוד</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
